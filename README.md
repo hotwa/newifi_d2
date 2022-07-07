@@ -5,7 +5,7 @@
 > 
 > password: password
 > 
-> 192.168.3.1
+> 192.168.2.1 (master branch)
 
 
 官方openwrt最新测试内核5.15的编译！
