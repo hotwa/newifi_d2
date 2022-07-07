@@ -59,5 +59,7 @@ rm -rf opentopd
 # svn co https://github.com/ykxVK8yL5L/axum-web/trunk/openwrt package/luci-app-axum-web
 
 #Alist
-git clone https://github.com/sbwml/openwrt-alist/luci-app-alist.git package/luci-app-alist
-git clone https://github.com/sbwml/openwrt-alist/alist.git package/alist
+# git clone https://github.com/sbwml/openwrt-alist/luci-app-alist.git package/luci-app-alist
+# git clone https://github.com/sbwml/openwrt-alist/alist.git package/alist
+svn co https://github.com/sbwml/openwrt-alist/trunk package/luci-app-alist
+mv package/luci-app-alist/luci-app-alist/po/zh_Hans package/luci-app-alist/luci-app-alist/po/zh-cn
