@@ -43,6 +43,7 @@ git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-ope
 git clone https://github.com/sirpdboy/autosamba.git package/autosamba
 git clone https://github.com/sirpdboy/automount.git package/automount
 git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
+rm -rf package/luci-app-netdata
 git clone https://github.com/sirpdboy/luci-app-netdata.git package/luci-app-netdata
 # sirpdboy 仓库选择克隆，直接做feeds编译报错
 mkdir opentopd/
