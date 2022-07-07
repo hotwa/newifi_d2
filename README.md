@@ -2,7 +2,9 @@
 
 ## 快速说明
 > user: root
+> 
 > password: password
+> 
 > 192.168.3.1
 
 
