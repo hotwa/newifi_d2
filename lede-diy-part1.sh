@@ -19,6 +19,5 @@ echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.co
 sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 sed -i '$a src-git small https://github.com/kenzok8/small-package' feeds.conf.default
 sed -i '$a src-git liuran001_packages https://github.com/liuran001/openwrt-packages' feeds.conf.default
-sed -i '$a src-git netspeedtest  https://github.com/sirpdboy/netspeedtest' feeds.conf.default
-# sed -i '$a src-git coolsnowwolf_packages https://github.com/coolsnowwolf/packages' feeds.conf.default
-# sed -i '$a src-git coolsnowwolf_luci https://github.com/coolsnowwolf/luci' feeds.conf.default
+sed -i '$a src-git coolsnowwolf_packages https://github.com/coolsnowwolf/packages' feeds.conf.default
+sed -i '$a src-git coolsnowwolf_luci https://github.com/coolsnowwolf/luci' feeds.conf.default
