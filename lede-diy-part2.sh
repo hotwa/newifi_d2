@@ -52,6 +52,12 @@ rm -rf package/koolddns && mv opentopd/koolddns package/koolddns
 rm -rf luci-app-koolddns && mv opentopd/luci-app-koolddns package/luci-app-koolddns
 rm -rf opentopd
 
-# add alist
+# for test 
+#Pikpak
+# svn co https://github.com/ykxVK8yL5L/pikpak-webdav/trunk/openwrt package/luci-app-pikpak-webdav
+#Axum-web
+# svn co https://github.com/ykxVK8yL5L/axum-web/trunk/openwrt package/luci-app-axum-web
+
+#Alist
 git clone https://github.com/sbwml/openwrt-alist/luci-app-alist.git package/luci-app-alist
 git clone https://github.com/sbwml/openwrt-alist/alist.git package/alist
