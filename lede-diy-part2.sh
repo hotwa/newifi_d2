@@ -40,24 +40,18 @@ git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-ope
 #git clone 
 #git clone 
 #git clone 
-git clone https://github.com/sirpdboy/autosamba.git package/autosamba
-git clone https://github.com/sirpdboy/automount.git package/automount
-git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
-rm -rf package/luci-app-netdata
-git clone https://github.com/sirpdboy/luci-app-netdata.git package/luci-app-netdata
+##由于习惯问题，会和LEAN大中的automount冲突 ，建议编译前先删除：rm -rf package/lean/automount
+rm -rf package/autosamba && git clone https://github.com/sirpdboy/autosamba.git package/autosamba
+rm -rf package/automount && git clone https://github.com/sirpdboy/automount.git package/automount
+rm -rf package/netspeedtest && git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
+rm -rf package/luci-app-netdata && git clone https://github.com/sirpdboy/luci-app-netdata.git package/luci-app-netdata
 # sirpdboy 仓库选择克隆，直接做feeds编译报错
 mkdir opentopd/
 git clone https://github.com/sirpdboy/koolddns opentopd/
-mv opentopd/koolddns package/koolddns
-mv opentopd/luci-app-koolddns package/luci-app-koolddns
-git clone https://github.com/sirpdboy/sirpdboy-package opentopd/
-##由于习惯问题，会和LEAN大中的automount冲突 ，建议编译前先删除：rm -rf package/lean/automount
-rm -rf package/lean/automount
-git clone https://github.com/sirpdboy/automount package/automount
-git clone https://github.com/sirpdboy/autosamba package/autosamba
-
+rm -rf package/koolddns && mv opentopd/koolddns package/koolddns
+rm -rf luci-app-koolddns && mv opentopd/luci-app-koolddns package/luci-app-koolddns
+rm -rf opentopd
 
 # add alist
-#git clone https://github.com/sbwml/openwrt-alist/luci-app-alist.git package/luci-app-alist
-#git clone https://github.com/sbwml/openwrt-alist/alist.git package/alist
-#git clone https://github.com/kiddin9/openwrt-packages.git package/openwrt-packages
+git clone https://github.com/sbwml/openwrt-alist/luci-app-alist.git package/luci-app-alist
+git clone https://github.com/sbwml/openwrt-alist/alist.git package/alist
