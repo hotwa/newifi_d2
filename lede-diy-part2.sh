@@ -34,10 +34,27 @@ git clone https://github.com/zzsj0928/luci-app-pushbot.git package/luci-app-push
 git clone https://github.com/riverscn/openwrt-iptvhelper.git package/openwrt-iptvhelper
 
 #sirpdboy
+git clone https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
+git clone https://github.com/sirpdboy/luci-app-netdata package/luci-app-netdata
+git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
+#git clone 
+#git clone 
+#git clone 
 git clone https://github.com/sirpdboy/autosamba.git package/autosamba
 git clone https://github.com/sirpdboy/automount.git package/automount
 git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
-#git clone https://github.com/sirpdboy/luci-app-netdata.git package/luci-app-netdata
+git clone https://github.com/sirpdboy/luci-app-netdata.git package/luci-app-netdata
+# sirpdboy 仓库选择克隆，直接做feeds编译报错
+mkdir opentopd/
+git clone https://github.com/sirpdboy/koolddns opentopd/
+mv opentopd/koolddns package/koolddns
+mv opentopd/luci-app-koolddns package/luci-app-koolddns
+git clone https://github.com/sirpdboy/sirpdboy-package opentopd/
+##由于习惯问题，会和LEAN大中的automount冲突 ，建议编译前先删除：rm -rf package/lean/automount
+rm -rf package/lean/automount
+git clone https://github.com/sirpdboy/automount package/automount
+git clone https://github.com/sirpdboy/autosamba package/autosamba
+
 
 # add alist
 #git clone https://github.com/sbwml/openwrt-alist/luci-app-alist.git package/luci-app-alist
