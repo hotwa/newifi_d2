@@ -46,11 +46,11 @@ rm -rf package/automount && git clone https://github.com/sirpdboy/automount.git 
 rm -rf package/netspeedtest && git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
 rm -rf package/luci-app-netdata && git clone https://github.com/sirpdboy/luci-app-netdata.git package/luci-app-netdata
 # sirpdboy 仓库选择克隆，直接做feeds编译报错
-mkdir opentopd/
-git clone https://github.com/sirpdboy/koolddns opentopd/
-rm -rf package/koolddns && mv opentopd/koolddns package/koolddns
-rm -rf luci-app-koolddns && mv opentopd/luci-app-koolddns package/luci-app-koolddns
-rm -rf opentopd
+# mkdir opentopd/
+# git clone https://github.com/sirpdboy/koolddns opentopd/
+# rm -rf package/koolddns && mv opentopd/koolddns package/koolddns
+# rm -rf luci-app-koolddns && mv opentopd/luci-app-koolddns package/luci-app-koolddns
+# rm -rf opentopd
 
 # for test 
 #Pikpak
