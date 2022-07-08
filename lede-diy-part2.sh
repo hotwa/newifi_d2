@@ -34,8 +34,8 @@ git clone https://github.com/zzsj0928/luci-app-pushbot.git package/luci-app-push
 git clone https://github.com/riverscn/openwrt-iptvhelper.git package/openwrt-iptvhelper
 
 #sirpdboy
-git clone https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
-git clone https://github.com/sirpdboy/luci-app-netdata package/luci-app-netdata
+rm -rf package/luci-app-autotimeset && git clone https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
+rm -rf package/luci-app-netdata && git clone https://github.com/sirpdboy/luci-app-netdata package/luci-app-netdata
 git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
 #git clone 
 #git clone 
