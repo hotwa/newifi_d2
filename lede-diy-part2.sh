@@ -30,12 +30,12 @@ git clone https://github.com/zxl78585/luci-app-filetransfer.git package/luci-app
 #添加额外软件包
 
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
-git clone https://github.com/zzsj0928/luci-app-pushbot.git package/luci-app-pushbot
+rm -rf package/luci-app-pushbot && git clone https://github.com/zzsj0928/luci-app-pushbot.git package/luci-app-pushbot
 git clone https://github.com/riverscn/openwrt-iptvhelper.git package/openwrt-iptvhelper
 
 #sirpdboy
-git clone https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
-git clone https://github.com/sirpdboy/luci-app-netdata package/luci-app-netdata
+rm -rf package/luci-app-autotimeset && git clone https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
+rm -rf package/luci-app-netdata && git clone https://github.com/sirpdboy/luci-app-netdata package/luci-app-netdata
 git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
 #git clone 
 #git clone 
@@ -46,11 +46,11 @@ rm -rf package/automount && git clone https://github.com/sirpdboy/automount.git 
 rm -rf package/netspeedtest && git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
 rm -rf package/luci-app-netdata && git clone https://github.com/sirpdboy/luci-app-netdata.git package/luci-app-netdata
 # sirpdboy 仓库选择克隆，直接做feeds编译报错
-mkdir opentopd/
-git clone https://github.com/sirpdboy/koolddns opentopd/
-rm -rf package/koolddns && mv opentopd/koolddns package/koolddns
-rm -rf luci-app-koolddns && mv opentopd/luci-app-koolddns package/luci-app-koolddns
-rm -rf opentopd
+# mkdir opentopd/
+# git clone https://github.com/sirpdboy/koolddns opentopd/
+# rm -rf package/koolddns && mv opentopd/koolddns package/koolddns
+# rm -rf luci-app-koolddns && mv opentopd/luci-app-koolddns package/luci-app-koolddns
+# rm -rf opentopd
 
 # for test 
 #Pikpak
