@@ -30,7 +30,7 @@ git clone https://github.com/zxl78585/luci-app-filetransfer.git package/luci-app
 #添加额外软件包
 
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
-git clone https://github.com/zzsj0928/luci-app-pushbot.git package/luci-app-pushbot
+rm -rf package/luci-app-pushbot && git clone https://github.com/zzsj0928/luci-app-pushbot.git package/luci-app-pushbot
 git clone https://github.com/riverscn/openwrt-iptvhelper.git package/openwrt-iptvhelper
 
 #sirpdboy
