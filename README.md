@@ -5,8 +5,35 @@
 > 
 > password: password
 > 
-> 192.168.2.1 (master branch)
+> 192.168.8.1 (master branch)
 
+## 开启wifi设置
+由于lede lean大神的源码默认关闭了wifi所以开机没有wifi
+如果有谁知道怎么默认开启并测试不报错，可以issue
+
+修改配置文件`/etc/rc.local`
+
+在exit 0前面添加
+
+```shell
+ifconfig ra0 up   #2G
+ifconfig rai0 up  #5G
+```
+
+同时需要注意
+
+Newifi D2默认配置，编辑LAN接口没有无线物理接口选择，保存后无线就关闭了，对比K2P，物理接口是有无线的
+如果保存前，在自定义接口加上 "ra0 rai0"，再点击保存并应用，无线就不会关闭
+
+参考[issu](https://github.com/coolsnowwolf/lede/issues/8259)
+
+
+
+![image](https://user-images.githubusercontent.com/8328013/141735800-bc5751af-7e19-44bc-b9c3-1d9f13eada4f.png)
+
+
+
+## 其他说明
 
 官方openwrt最新测试内核5.15的编译！
 集成全部USB网卡驱动，支持安卓USB共享网络！
