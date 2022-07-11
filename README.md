@@ -51,6 +51,48 @@ service cron restart # 设置定时任务重启服务
 
 
 
+## tailscale配置参考
+
+### 命令行登录tailscale
+
+```shell
+tailscale up --login-server=http://<URL>:8080 --accept-routes --accept-dns=false --advertise-routes=192.168.8.0/24 --advertise-exit-node
+```
+
+### 添加网口
+
+网络-接口-添加新结构
+
+名称ts0 静态路由 添加tailscale客户端分配的ip （命令行查询方式:tailscale ip）
+
+子网掩码：
+
+官方填：255.0.0.0
+
+自建服务器：255.255.255.0
+
+网关填路由器网关：192.168.8.1（默认）
+
+广播：192.168.8.255
+
+DNS：114.114.114.114
+
+防火墙区域添加至`LAN`
+
+### openwrt 开启转发
+
+```shell
+echo 'net.ipv4.ip_forward = 1' | tee /etc/sysctl.d/ipforwarding.conf
+echo 'net.ipv6.conf.all.forwarding = 1' | tee -a /etc/sysctl.d/ipforwarding.conf
+sysctl -p /etc/sysctl.d/ipforwarding.conf
+```
+
+防火墙-常规设置-转发-接受
+
+区域：lan转发wan全部接受
+
+
+
 ## 其他说明
 
 官方openwrt最新测试内核5.15的编译！
