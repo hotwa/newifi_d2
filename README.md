@@ -91,7 +91,10 @@ sysctl -p /etc/sysctl.d/ipforwarding.conf
 
 区域：lan转发wan全部接受
 
+## dev 版本
 
+dev 版本去除了alist （占用太大）
+增添其他的实用工具
 
 ## 其他说明
 
