@@ -16,7 +16,12 @@ sed -i 's/192.168.1.1/192.168.8.1/g' package/base-files/files/bin/config_generat
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
 sed -i '$a net.ipv4.ip_forward = 1' package/base-files/files/etc/sysctl.conf
 sed -i '$a net.ipv6.conf.all.forwarding = 1' package/base-files/files/etc/sysctl.conf
-
+# open wifi
+sed -i 's/exit 0/ifconfig ra0 up/g' package/base-files/files/etc/rc.local
+sed -i '$a ifconfig rai0 up' package/base-files/files/etc/rc.local
+sed -i '$a exit 0' package/base-files/files/etc/rc.local
+# fix wifi not in lan 修正wifi网络不在lan
+sed -i "s/option ifname 'eth0.1'/option ifname 'eth0.1 ra0 rai0'/g" /etc/config/network
 # themes添加（svn co 命令意思：指定版本如https://github）
 git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
 git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/luci-theme-opentomcat
