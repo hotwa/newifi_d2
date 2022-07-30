@@ -91,7 +91,14 @@ sysctl -p /etc/sysctl.d/ipforwarding.conf
 
 区域：lan转发wan全部接受
 
+## 升级内核(手动)
 
+```shell
+cd /tmp
+wget https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/packages/kernel_5.10.
+131-1-912e65070c8d5fe2f65fc191f37e61f2_mipsel_24kc.ipk
+opkg install 
+```
 
 ## 其他说明
 
