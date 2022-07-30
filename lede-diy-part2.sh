@@ -20,6 +20,7 @@ sed -i '$a net.ipv6.conf.all.forwarding = 1' package/base-files/files/etc/sysctl
 sed -i 's/option check_signature//g' package/base-files/files/etc/opkg.conf
 sed -i '/^src/,$d' package/base-files/files/etc/opkg/distfeeds.conf
 echo 'src/gz openwrt_kiddin9 https://op.supes.top/packages/mipsel_24kc' >> package/base-files/files/etc/opkg/distfeeds.conf
+# sed -i 's/option check_signature//g' /etc/opkg.conf
 # echo 'src/gz openwrt_kiddin9 https://op.supes.top/packages/mipsel_24kc' >> /etc/opkg/distfeeds.conf
 # open wifi
 sed -i 's/exit 0/ifconfig ra0 up/g' package/base-files/files/etc/rc.local
