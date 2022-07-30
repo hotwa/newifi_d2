@@ -11,7 +11,7 @@
 由于lede lean大神的源码默认关闭了wifi所以开机没有wifi
 如果有谁知道怎么默认开启并测试不报错，可以issue
 
-修改配置文件`/etc/rc.local`
+修改配置文件`/etc/rc.local`(已经默认配置)
 
 在exit 0前面添加
 
@@ -79,7 +79,7 @@ DNS：114.114.114.114
 
 防火墙区域添加至`LAN`
 
-### openwrt 开启转发
+### openwrt 开启转发（已经默认集成固件）
 
 ```shell
 echo 'net.ipv4.ip_forward = 1' | tee /etc/sysctl.d/ipforwarding.conf
@@ -99,48 +99,45 @@ sysctl -p /etc/sysctl.d/ipforwarding.conf
 集成全部USB网卡驱动，支持安卓USB共享网络！
 精简仅集成如下（参考）
 
-CONFIG_PACKAGE_luci-app-adguardhome=y
+精简版，添加源 https://op.supes.top/packages/mipsel_24kc
+按需安装
+默认集成源中没有的tailscale
+其余按需opkg install 即可
 
-CONFIG_PACKAGE_luci-app-easymesh=y
-
-CONFIG_PACKAGE_luci-app-frpc=y
-
-CONFIG_PACKAGE_luci-app-frps=y
-
-CONFIG_PACKAGE_luci-app-guest-wifi=y
-
-CONFIG_PACKAGE_luci-app-jd-dailybonus=y
-
-CONFIG_PACKAGE_luci-app-mwan3=y
-
-CONFIG_PACKAGE_luci-app-ntpc=y
-
-CONFIG_PACKAGE_luci-app-openclash=y
-
-CONFIG_PACKAGE_luci-app-passwall=y
-
-CONFIG_PACKAGE_luci-app-pptp-server=y
-
+```shell
+CONFIG_PACKAGE_luci-app-socat=y
+CONFIG_PACKAGE_uugamebooster=y
+CONFIG_PACKAGE_luci-app-uugamebooster=y
+CONFIG_PACKAGE_nginx-all-module=y
+CONFIG_PACKAGE_luci-app-nginx-manager=y
+CONFIG_PACKAGE_e2fsprogs=y
+CONFIG_PACKAGE_fdisk=y
+CONFIG_PACKAGE_ddns=y
+CONFIG_PACKAGE_luci-app-ddns=y
+CONFIG_PACKAGE_luci-i18n-ddns-zh-cn=y
+CONFIG_PACKAGE_ddns-scripts=y
+CONFIG_PACKAGE_ddns-scripts_aliyun=y
+CONFIG_PACKAGE_ddns-scripts_dnspod=y
+CONFIG_PACKAGE_hd-idle=y
+CONFIG_PACKAGE_luci-app-hd-idle=y
 CONFIG_PACKAGE_luci-app-pushbot=y
-
-CONFIG_PACKAGE_luci-app-qos=y
-
+CONFIG_PACKAGE_tailscale=y
+CONFIG_PACKAGE_tailscaled=y
+CONFIG_PACKAGE_luci-app-samba=y
+CONFIG_PACKAGE_smartdns=y
 CONFIG_PACKAGE_luci-app-smartdns=y
-
 CONFIG_PACKAGE_luci-app-sqm=y
-
-CONFIG_PACKAGE_luci-app-syncdial=y
-
+CONFIG_PACKAGE_ttyd=y
 CONFIG_PACKAGE_luci-app-ttyd=y
-
-CONFIG_PACKAGE_luci-app-udpxy=y
-
 CONFIG_PACKAGE_luci-app-uhttpd=y
-
-CONFIG_PACKAGE_luci-app-usb-printer=y
-
-CONFIG_PACKAGE_luci-app-wifischedule=y
-
-CONFIG_PACKAGE_luci-app-wireguard=y
-
-AP版本仅有passwall,smartdns,usb共享，clash。
+CONFIG_PACKAGE_luci-app-upnp=y
+CONFIG_PACKAGE_luci-app-wol=y
+CONFIG_PACKAGE_passwall=y
+CONFIG_PACKAGE_luci-app-passwall=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_Libev_Server=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray=y
+CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray_Plugin=y
+CONFIG_PACKAGE_ntpc=y
+CONFIG_PACKAGE_luci-app-ntpc=y
+CONFIG_PACKAGE_luci-app-dnsfilter=y
+```
