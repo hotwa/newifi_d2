@@ -100,6 +100,13 @@ wget https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/packages/kern
 opkg install 
 ```
 
+## 添加软件源
+
+```shell
+sed -i 's/option check_signature//g' /etc/opkg.conf
+echo 'src/gz openwrt_kiddin9 https://op.supes.top/packages/mipsel_24kc' >> /etc/opkg/distfeeds.conf
+```
+
 ## 其他说明
 
 官方openwrt最新测试内核5.15的编译！
