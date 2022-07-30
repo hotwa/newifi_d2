@@ -114,7 +114,7 @@ opkg install
 sed -i 's/option check_signature//g' /etc/opkg.conf
 echo 'src/gz openwrt_kiddin9 https://op.supes.top/packages/mipsel_24kc' >> /etc/opkg/distfeeds.conf
 ```
-
+https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/packages/
 ## qbittorrent 安装
 
 感谢静态编译的[仓库](https://github.com/jsp1256/qBittorrent_cross_complie)
