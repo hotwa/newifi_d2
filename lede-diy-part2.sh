@@ -16,6 +16,10 @@ sed -i 's/192.168.1.1/192.168.8.1/g' package/base-files/files/bin/config_generat
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
 sed -i '$a net.ipv4.ip_forward = 1' package/base-files/files/etc/sysctl.conf
 sed -i '$a net.ipv6.conf.all.forwarding = 1' package/base-files/files/etc/sysctl.conf
+# change feeds
+sed -i 's/option check_signature//g' package/base-files/files/etc/opkg.conf
+sed -i '/^src/,$d' package/base-files/files/etc/opkg/distfeeds.conf
+echo 'src/gz openwrt_kiddin9 https://op.supes.top/packages/mipsel_24kc' >> package/base-files/files/etc/opkg/distfeeds.conf
 # open wifi
 sed -i 's/exit 0/ifconfig ra0 up/g' package/base-files/files/etc/rc.local
 sed -i '$a ifconfig rai0 up' package/base-files/files/etc/rc.local
