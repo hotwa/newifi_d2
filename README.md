@@ -91,6 +91,14 @@ sysctl -p /etc/sysctl.d/ipforwarding.conf
 
 区域：lan转发wan全部接受
 
+## 手动添加包
+```shell
+alist
+rclone
+filebrowser
+qBittorrent
+```
+
 ## 升级内核(手动)
 
 ```shell
@@ -111,22 +119,8 @@ echo 'src/gz openwrt_kiddin9 https://op.supes.top/packages/mipsel_24kc' >> /etc/
 
 感谢静态编译的[仓库](https://github.com/jsp1256/qBittorrent_cross_complie)
 
-依赖装的太麻烦,直接下载[二进制文件](https://github.com/jsp1256/qBittorrent_cross_complie/blob/master/bin/4.4.0/qbittorrent-nox)
+依赖装的太麻烦,直接下载静态[二进制文件](https://github.com/jsp1256/qBittorrent_cross_complie/blob/master/bin/4.4.0/qbittorrent-nox)
 
-
-编译的qBittorrent 4.1.3（MT7621 uClibc库）由以下组件构成
-
-qBittorrent-4.1.3
-libtorrent-1.0.11
-qt-lib-5.8.0（openssl-linked）
-boost-system-1.56（multi）
-openssl-1.0.2p
-zlib-1.2.11
-libiconv-1.15
-
-```shell
-opkg install libstdcpp # 需要c++ 标准库
-```
 
 ## 其他说明
 
