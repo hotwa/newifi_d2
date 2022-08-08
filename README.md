@@ -33,6 +33,8 @@ Newifi D2默认配置，编辑LAN接口没有无线物理接口选择，保存�
 
 ## 校园网 Srun 深澜认证登录（参考）
 
+[教程参考](https://zhuanlan.zhihu.com/p/551332214)
+
 自动认证登录参考[博客](https://blog.csdn.net/qq248606117/article/details/125144699)
 
 自动认证参考的的github[项目](https://github.com/zu1k/sdusrun)rust编写，有能力的同学可以后续搞个openwrt插件，搞个界面自动登录。代表广大师生感谢。
