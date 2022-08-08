@@ -112,6 +112,10 @@ opkg install
 
 ## 添加软件源
 
+**注释签名**
+
+option check_signature
+
 ```shell
 sed -i 's/option check_signature//g' /etc/opkg.conf
 echo 'src/gz openwrt_kiddin9 https://op.supes.top/packages/mipsel_24kc' >> /etc/opkg/distfeeds.conf
