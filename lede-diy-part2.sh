@@ -60,7 +60,7 @@ rm -rf package/netspeedtest && git clone https://github.com/sirpdboy/netspeedtes
 rm -rf package/luci-app-netdata && git clone https://github.com/sirpdboy/luci-app-netdata.git package/luci-app-netdata
 
 # add theme
-rm lede/package/lede/luci-theme-argon
+rm -rf lede/package/lede/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git lede/package/lede/luci-theme-argon
 # sirpdboy 仓库选择克隆，直接做feeds编译报错
 # mkdir opentopd/
