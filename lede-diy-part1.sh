@@ -22,3 +22,16 @@ sed -i '$a src-git liuran001_packages https://github.com/liuran001/openwrt-packa
 sed -i '$a src-git coolsnowwolf_packages https://github.com/coolsnowwolf/packages' feeds.conf.default
 sed -i '$a src-git coolsnowwolf_luci https://github.com/coolsnowwolf/luci' feeds.conf.default
 #sed -i '$a src-git kiddin9 https://github.com/kiddin9/openwrt-packages' feeds.conf.default
+
+cat << EOF >> target/linux/ramips/image/mt7621.mk 
+define Device/jdc_re-cp-02
+  $(Device/uimage-lzma-loader)
+  IMAGE_SIZE := 16064k  
+  DEVICE_VENDOR := JDCloud
+  DEVICE_MODEL := re-cp-02
+  DEVICE_COMPAT_VERSION := 1.0
+  DEVICE_PACKAGES := kmod-mt7603e kmod-mt76x2e kmod-usb3 kmod-usb-ledtrig-usbport luci-app-mtwifi \
+        kmod-sdhci kmod-sdhci-mt7620 -wpad-openssl
+endef
+TARGET_DEVICES += jdc_re-cp-02
+EOF
