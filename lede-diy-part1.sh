@@ -31,7 +31,7 @@ define Device/jdc_re-cp-02
   DEVICE_MODEL := re-cp-02
   DEVICE_COMPAT_VERSION := 1.0
   DEVICE_PACKAGES := kmod-mt7603e kmod-mt76x2e kmod-usb3 kmod-usb-ledtrig-usbport luci-app-mtwifi \
-        kmod-sdhci kmod-sdhci-mt7620 -wpad-openssl
+        -wpad-openssl
 endef
 TARGET_DEVICES += jdc_re-cp-02
 EOF
