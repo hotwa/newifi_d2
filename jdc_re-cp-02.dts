@@ -1,12 +1,13 @@
-/dts-v1/;
-
+#model = "re-cp-02";
+	
 / {
 	#address-cells = <0x01>;
 	#size-cells = <0x01>;
-	compatible = "mediatek,mt7621-rfb\0mediatek,mt7621-soc";
-	model = "MediaTek MT7621 reference board";
+	compatible = "JDCloud,re-cp-02", "mediatek,mt7621-soc";
+	model = "re-cp-02";
 
 	chosen {
+		bootargs = "console=ttyS0,115200";
 		stdout-path = "/palmbus/uartlite0@1e000c00";
 	};
 
